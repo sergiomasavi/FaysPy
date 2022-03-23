@@ -17,9 +17,9 @@ class Config:
     MAIL_USERNAME = os.environ.get('MAIL_FAYS_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_FAYS_PASSWORD')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    OFFBRAND_MAIL_SUBJECT_PREFIX = '[FaysInnovation]'
-    OFFBRAND_MAIL_SENDER = 'FaysInnovation <fays.innovation@gmail.com>'
-    OFFBRAND_ADMIN = os.environ.get('fays.innovation@gmail.com')
+    OFFBRAND_MAIL_SUBJECT_PREFIX = '[FaysPy]'
+    OFFBRAND_MAIL_SENDER = 'Fayspy <fayspy.ds@gmail.com>'
+    OFFBRAND_ADMIN = os.environ.get('fayspy.ds@gmail.com')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_RECORD_QUERIES = True
 
