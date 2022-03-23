@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+<!-- Bootstrap WTF Python Module -->
+{% import "bootstrap/wtf.html" as wtf %}
+<!---->
+{% block page_styles %}
+<!---->
+{{ super() }}
+<!---->
+<link href="../static/fays-0.0.1/css/edit_profile.css" rel="stylesheet">
+<!---->
+{% endblock %}
+<!---->
+
+<!---->
+{% block content %}
+<div class="container-fluid section">
+    <div class="page-header">
+        <h1>Edit Your Profile</h1>
+    </div>
+    <form action="/edit-profile" method="POST">
+        <div class="col-md-4">
+            {{ form.csrf_token }}
+            <div class="form-group required ">
+                <!-- Name -->
+                {{ wtf.form_field(form.name) }}
+            </div>
+
+            <div class="form-group required ">
+                <!-- About me -->
+                {{ wtf.form_field(form.about_me) }}
+            </div>
+        </div>
+        <!-- Edit profile submit -->
+        {{ form.submit(size=20, class_='btn btn-primary') }}
+    </form>
+</div>
+<!---->
+{% endblock %}
+
+<!-- ======= Scripts ======= -->
+{% block scripts %}
+<!-- Herencia de base -->
+{{ super() }}
+<!-- JS index.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+<script src="../static/fays-0.0.1/js/home.js"></script>
+{% endblock %}
+<!-- /end scripts -->

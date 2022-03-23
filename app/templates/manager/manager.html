@@ -1,0 +1,51 @@
+ {% extends "base.html" %}
+<!-- Bootstrap WTF Python Module -->
+{% import "bootstrap/wtf.html" as wtf %}
+<!-- ======= Estilos de la página ======= -->
+{% block page_styles %}
+<!---->
+{{super()}}
+<!-- Estilos del contenido -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="../../static/fays-0.0.1/css/manager.css" rel="stylesheet">
+
+<!---->
+{% endblock %}
+<!-- /end estilos de la página -->
+
+<!-- ======= Content ======= -->
+{% block content %}
+
+<!---->
+{% block manager_pagination %}
+<!-- Pagination de la apligación-->
+<div class="container-fluid section agenda_pag">
+
+    <nav aria-label="Agenda manager navigation">
+        <ul class="pagination justify-content-center">
+            <a class="page-link" href="notebook">Notebook</a>
+            <a class="page-link" href="agenda">Agenda</a>
+            <a class="page-link" href="#">Dashboard</a>
+        </ul>
+    </nav>
+</div>
+
+{% endblock manager_pagination %}
+
+<!-- Contenido de la aplicación -->
+{% block manager_content %} {% endblock manager_content%}
+
+<!-- enblock content-->
+{% endblock content%}
+<!---->
+{% block footer_page %} {{super()}} {% endblock footer_page%}
+
+<!-- ======= Scripts ======= -->
+<!-- ======= Scripts ======= -->
+{% block scripts %}
+<!-- Herencia de base -->
+{{ super() }}
+<!-- JS index.js -->
+<script src="../../static/fays-0.0.1/js/manager.js"></script>
+{% endblock %}

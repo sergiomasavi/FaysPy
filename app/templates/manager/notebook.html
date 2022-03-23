@@ -1,0 +1,74 @@
+{% extends "manager/manager.html" %}
+<!-- Bootstrap WTF Python Module -->
+{% import "bootstrap/wtf.html" as wtf %}
+<!-- ======= Estilos de la página ======= -->
+{% block page_styles %}
+<!---->
+{{super()}}
+<!-- Estilos del contenido -->
+<!---->
+<link href="../../static/fays-0.0.1/css/manager.css" rel="stylesheet">
+<!---->
+{% endblock %}
+<!-- /end estilos de la página -->
+
+<!-- ======= Content manager ======= -->
+{% block manager_content %}
+<div class="container-flui notebook">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">My Notebook</h5>
+                    <form action="notebook" method="POST">
+
+                        {{ form.csrf_token }}
+                        <div class="form-group">
+                            <!-- Descripción -->
+                            {{ wtf.form_field(form.tarea) }}
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Tipo de tarea (ABC) -->
+                            <div class="form-group">
+                                <label class="control-label" for="clasificacion">Tipo</label>
+                                <select id="tipo" name="tipo" class="form-control">
+                                    <option value='A'>Tipo A - Muy importante</option>
+                                    <option value='B'>Tipo B - Importante</option>
+                                    <option value='C'>Tipo C - Poco importante</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Duración total de la tarea -->
+                            <label class="control-label" for="duracion_total">Tiempo en horas</label>
+                            <input class="form-control" id="duracion_total" name="duracion_total" required="" type="text" value="">
+                        </div>
+                        <div class="form-group">
+                            <!-- Fecha de final -->
+                            {{ wtf.form_field(form.fecha_inicio) }}
+
+                        </div>
+                        <div class="form-group">
+                            <!-- Fecha de final -->
+                            {{ wtf.form_field(form.fecha_final) }}
+
+                        </div>
+
+
+                        <!-- Submit task -->
+                        {{ form.submit(size=20, class_='btn btn-primary') }}
+                        <hr class="my-4">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}
+
+<!-- ======= Scripts ======= -->
+{% block scripts %} {{super()}} {% endblock %}

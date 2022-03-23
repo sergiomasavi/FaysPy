@@ -1,0 +1,24 @@
+.title {
+    font-size: 15vh;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 10vh;
+    text-align: center;
+}
+
+.typed {
+    color: white;
+}
+
+.hero {
+    display: inline-block;
+    background-image: url('../img/bg-image.jpg');
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    vertical-align: middle;
+    height: 100vh;
+    text-align: center;
+    padding-top: 30vh;
+}

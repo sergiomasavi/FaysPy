@@ -1,0 +1,50 @@
+ {% extends "base.html" %}
+
+<!-- Bootstrap WTF Python Module -->
+{% import "bootstrap/wtf.html" as wtf %}
+
+<!-- ======= Estilos de la página ======= -->
+{% block page_styles %}
+<!-- Estilos del contenido -->
+<link rel="stylesheet" href="../static/fays-0.0.1/css/login.css">
+<!---->
+{% endblock %}
+<!-- /end estilos de la página -->
+
+<!-- ======= Content ======= -->
+{% block content %}
+
+
+<div class="container-fluid section">
+
+    <h1>Login</h1>
+    <form action="/auth/login" method="POST">
+        {{ form.csrf_token }}
+        <div class="form-group required ">
+            <!-- Email -->
+            {{ wtf.form_field(form.email) }}
+        </div>
+
+        <div class="form-group required ">
+            <!-- Password -->
+            {{ wtf.form_field(form.password) }}
+        </div>
+
+        <div class="checkbox ">
+            <!-- Remember me -->
+            {{ wtf.form_field(form.remember_me) }}
+        </div>
+
+        <!-- Login submit -->
+        {{ form.submit(size=20, class_='btn btn-primary') }}
+
+    </form>
+
+    <br>
+    <p>Forgot your password? <a href="{{ url_for( 'auth.password_reset_request') }} ">Click here to reset it</a>.</p>
+    <p>New user? <a href="{{ url_for( 'auth.register') }} ">Click here to register</a>.</p>
+</div>
+{% endblock %}
+
+
+<!-- /end content -->

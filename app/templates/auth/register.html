@@ -1,0 +1,52 @@
+{% extends "base.html" %} {% import "bootstrap/wtf.html" as wtf %}
+
+
+<!-- ======= Estilos de la página ======= -->
+{% block page_styles %} {{ super() }}
+<!-- Estilos del contenido -->
+<link rel="stylesheet" href="../static/fays-0.0.1/css/register.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+<!---->
+{% endblock %}
+<!-- /end estilos de la página -->
+
+
+<!-- ======= Content ======= -->
+{% block content %}
+
+
+<div class="container-fluid section">
+    <h1>Register</h1>
+
+    <form action="/auth/register" method="POST">
+        {{ form.csrf_token }}
+        <div class="form-group required ">
+            <!-- Email -->
+            {{ wtf.form_field(form.username) }}
+        </div>
+
+        <div class="form-group required ">
+            <!-- Password -->
+            {{ wtf.form_field(form.email) }}
+        </div>
+
+        <div class="checkbox ">
+            <!-- Password-->
+            {{ wtf.form_field(form.password) }}
+        </div>
+
+        <div class="checkbox ">
+            <!-- Password 2-->
+            {{ wtf.form_field(form.password2) }}
+        </div>
+
+        <!-- Login submit -->
+        {{ form.submit(size=20, class_='btn btn-primary') }}
+
+    </form>
+
+</div>
+{% endblock %}
+<!-- /end content -->

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+<!-- ======= Estilos de la página ======= -->
+{% block page_styles %} {{ super() }}
+<!-- Estilos del contenido -->
+<link rel="stylesheet" href="../static/fays-0.0.1/css/home.css">
+<!---->
+{% endblock %}
+<!-- /end estilos de la página -->
+
+{% block body_header %} {% endblock %}
+
+<!-- ======= content ======= -->
+{% block content %}
+
+<div class="container-fluid section">
+    <h1 class="title">ROW 1</h1>
+</div>
+<div class="container-fluid section">
+    <h1 class="title">ROW 1</h1>
+</div>
+<div class="container-fluid section">
+    <h1 class="title">ROW 1</h1>
+</div>
+<div class="container-fluid section">
+    <h1 class="title">ROW 1</h1>
+</div>
+{% endblock %}
+<!-- /end content -->
+
+<!-- ======= Scripts ======= -->
+{% block scripts %}
+<!-- Herencia de base -->
+{{ super() }}
+<!-- JS index.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+<script src="../static/fays-0.0.1/js/home.js"></script>
+{% endblock %}
+<!-- /end scripts -->

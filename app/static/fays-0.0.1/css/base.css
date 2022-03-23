@@ -1,0 +1,80 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.navbar-custom {
+    color: white;
+    background: #0F2027;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.nav-item {
+    padding: 10px;
+}
+
+.acc {
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.list {
+    color: black;
+}
+
+.dropdown-menu {
+    padding-right: 50px;
+    background: white;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.copyright {
+    color: white;
+}
+
+.section {
+    border-style: dashed;
+    border-color: red;
+    border-width: 5px;
+    padding: 50px;
+    padding-top: 100px;
+    margin-top: 100px;
+    margin-top: 25px;
+    height: 40vh auto;
+}
+
+
+/*
+.row {
+    background-color: seagreen;
+    border-style: dashed;
+    border-color: blueviolet;
+}
+
+.col,
+.col-6 {
+    background-color: salmon;
+    border-style: dashed;
+    border-color: yellow;
+}
+*/
+
+#page-main {
+    background-color: cyan;
+    position: relative;
+    min-height: 80vh;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

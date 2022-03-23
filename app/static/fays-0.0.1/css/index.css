@@ -1,0 +1,40 @@
+ .title {
+    font-size: 5vw;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 2vw;
+    text-align: center;
+}
+
+.typed {
+    color: white;
+}
+
+.hero {
+    display: inline-block;
+    background-image: url('../img/bg-image.jpg');
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    vertical-align: middle;
+    height: 100vh;
+    text-align: center;
+    padding-top: 30vh;
+}
+
+
+/*
+.row {
+    height: 50%;
+    background-color: seagreen;
+    border-style: dashed;
+    border-color: blueviolet;
+}
+
+.col {
+    background-color: salmon;
+    border-style: dashed;
+    border-color: blueviolet;
+}
+*/
